@@ -19,6 +19,7 @@ static BOOL isInterceptedSelector(SEL sel) {
             // UIScrollViewDelegate
             sel == @selector(scrollViewDidScroll:) ||
             sel == @selector(scrollViewWillBeginDragging:) ||
+            sel == @selector(scrollViewWillEndDragging:withVelocity:targetContentOffset:) ||
             sel == @selector(scrollViewDidEndDragging:willDecelerate:) ||
             sel == @selector(scrollViewDidEndDecelerating:) ||
             // UICollectionViewDelegate
@@ -36,11 +37,6 @@ static BOOL isInterceptedSelector(SEL sel) {
             sel == @selector(collectionView:layout:referenceSizeForFooterInSection:) ||
             sel == @selector(collectionView:layout:referenceSizeForHeaderInSection:) ||
             sel == @selector(collectionView:layout:referenceSizeForHeaderInSection:) ||
-            // UIScrollViewDelegate
-            sel == @selector(scrollViewDidScroll:) ||
-            sel == @selector(scrollViewWillBeginDragging:) ||
-            sel == @selector(scrollViewDidEndDragging:willDecelerate:) ||
-            sel == @selector(scrollViewDidEndDecelerating:) ||
             // IGListCollectionViewDelegateLayout
             sel == @selector(collectionView:layout:customizedInitialLayoutAttributes:atIndexPath:) ||
             sel == @selector(collectionView:layout:customizedFinalLayoutAttributes:atIndexPath:)
